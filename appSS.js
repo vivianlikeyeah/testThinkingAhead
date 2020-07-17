@@ -228,22 +228,22 @@ function startNetwork(data) {
 
     //Connections between nodes
     var edgesArray = [
-    {from: 0, to: 1, arrows: { to: { enabled: true, type: 'arrow' }}},
-    {from: 3, to: 4, arrows: { to: { enabled: true, type: 'arrow' }}},
-    {from: 1, to: 2, arrows: { to: { enabled: true, type: 'arrow' }}},
-    {from: 2, to: 3, length: 100, arrows: { to: { enabled: true, type: 'arrow' }}},
-    {from: 13, to: 14, arrows: { to: { enabled: true, type: 'arrow' }}},
-    {from: 4, to: 5, length: 100, arrows: { to: { enabled: true, type: 'arrow' }}},
-    {from: 14, to: 15 , arrows: { to: { enabled: true, type: 'arrow' }}},
-    {from: 5, to: 50, arrows: { to: { enabled: true, type: 'arrow' }}},
-    {from: 50, to: 6, length: 200, arrows: { to: { enabled: true, type: 'arrow' }}},
-    {from: 50, to: 7, length: 200, arrows: { to: { enabled: true, type: 'arrow' }}},
-    {from: 50, to: 8, length: 200, arrows: { to: { enabled: true, type: 'arrow' }}},
-    {from: 50, to: 9, length: 200, arrows: { to: { enabled: true, type: 'arrow' }}},
-    {from: 50, to: 10, length: 200, arrows: { to: { enabled: true, type: 'arrow' }}},
-    {from: 50, to: 11, length: 200, arrows: { to: { enabled: true, type: 'arrow' }}},
-    {from: 50, to: 12, length: 200, arrows: { to: { enabled: true, type: 'arrow' }}},
-    {from: 50, to: 13, length: 200, arrows: { to: { enabled: true, type: 'arrow' }}}
+    {from: 0, to: 1, width:3.5, arrows: { to: { enabled: true, type: 'triangle' }}},
+    {from: 3, to: 4, width:3.5, arrows: { to: { enabled: true, type: 'triangle' }}},
+    {from: 1, to: 2, width:3.5, arrows: { to: { enabled: true, type: 'arrow' }}},
+    {from: 2, to: 3, width:3.5, length: 100, arrows: { to: { enabled: true, type: 'arrow' }}},
+    {from: 13, to: 14, width:3.5, arrows: { to: { enabled: true, type: 'arrow' }}},
+    {from: 4, to: 5, width:3.5, length: 100, arrows: { to: { enabled: true, type: 'arrow' }}},
+    {from: 14, to: 15 , width:3.5, arrows: { to: { enabled: true, type: 'arrow' }}},
+    {from: 5, to: 50, width:3.5, arrows: { to: { enabled: true, type: 'arrow' }}},
+    {from: 50, to: 6, width:3.5, length: 200, arrows: { to: { enabled: true, type: 'arrow' }}},
+    {from: 50, to: 7, width:3.5, length: 200, arrows: { to: { enabled: true, type: 'arrow' }}},
+    {from: 50, to: 8, width:3.5, length: 200, arrows: { to: { enabled: true, type: 'arrow' }}},
+    {from: 50, to: 9, width:3.5, length: 200, arrows: { to: { enabled: true, type: 'arrow' }}},
+    {from: 50, to: 10, width:3.5, length: 200, arrows: { to: { enabled: true, type: 'arrow' }}},
+    {from: 50, to: 11, width:3.5, length: 200, arrows: { to: { enabled: true, type: 'arrow' }}},
+    {from: 50, to: 12, width:3.5, length: 200, arrows: { to: { enabled: true, type: 'arrow' }}},
+    {from: 50, to: 13, width:3.5, length: 200, arrows: { to: { enabled: true, type: 'arrow' }}}
 
 
     ];
