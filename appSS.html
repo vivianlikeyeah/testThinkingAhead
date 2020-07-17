@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>Learning Tree App</title>
+<link rel="stylesheet" href="app.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://www.chartjs.org/dist/2.9.3/Chart.min.js"></script>
+<script src="https://www.chartjs.org/samples/latest/utils.js"></script>
+
+<script type="text/javascript" src="https://visjs.github.io/vis-network/standalone/umd/vis-network.min.js"></script>
+
+
+</head>
+
+<body>
+  <div class = "topBar">
+    <img src = "logo.png" height = 80%> </img>
+  </div>
+
+  <div id = "primary-menu">
+    <ul>
+      <li><a id = "Explore" class="active"><img src = "book.png" height = 25px width = 25px> <br>Learn</a></li>
+    </ul>
+  </div>
+
+
+
+  <div class = "mainBox">
+  <h1 id="h1">  The Learning Tree </h1>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div id = "modal-content" class="modal-content">
+        <span class="close"> x </span>
+        <div class = "modal-heading">
+         <b>Node Preview</b>
+       </div>
+        <div id = "modal-text">
+        <p>Node Information</p>
+        <p> Node Title </p>
+        <p> Node Level </p>
+        <p> Modules </p>
+        <p> Node Link </p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+    <div id="mynetwork"></div>
+
+
+
+
+  </div>
+
+  <div class = "rightBox" id="rightBox">
+
+    <div class = "sub1" id="LearnLegend" style="display:none;">
+    <h3>Legend</h3>
+    <div class = "legend"> <div class ="legendText"><img src ="bluecircle.png" height = 20%>  </div><div class ="legendText">Level 4 </div></div>
+    <div class = "legend"> <div class ="legendText"><img src ="pinkcircle.png" height = 20%> </div><div class ="legendText"> Level 5 </div></div>
+    <div class = "legend"> <div class ="legendText"><img src ="orangecircle.png" height = 20%></div><div class ="legendText"> Level 6 </div></div>
+    </div>
+
+    <div class = "sub2" id="ExploreLegend">
+    <h3>Legend</h3>
+    <div class = "legend"> <div class ="legendText"><img src ="yellowcircle.png" height = 20% >  </div><div class ="legendText"> Core </div></div>
+    <div class = "legend"> <div class ="legendText"><img src ="greycircle.png" height = 20% > </div><div class ="legendText"> Optional </div></div>
+    </div>
+
+
+    <div class = "sub3">
+    <h3>More Information</h3>
+
+    <div class = "moreinfo" id = "moreinfo">To complete the Thinking Ahead Programme you must complete <b> all </b> Core nodes </b> and <b> a minimum of 3 </b> Optional nodes.
+    </div>
+
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+</body>
+
+
+<script type="text/javascript" src="appSS.js"></script>
+</html>
