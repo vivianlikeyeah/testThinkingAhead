@@ -209,7 +209,7 @@ function startNetwork(data) {
     var nodesArray = [
     { id: 4, label: "User-centred \n design", level: 4, group: 100,  project: 4, x:50, y:30, font: '16px verdana black' },
     { id: 1, label: "Working \n Effectively", level: 1, group: 100,  project: 2, x:-150, y:-200, font: '16px verdana black'},
-    { id: 5, label: "Understanding \n your users", level: 5, group: 100,  project: 2, x:150, y:-50, font: '16px verdana black' },
+    { id: 5, label: "Understanding \n your users", level: 5, group: 100,  project: 2, x:190, y:-50, font: '16px verdana black' },
     { id: 3, label: "Research\n Skills", level: 3, group: 100,  project: 2, x:-40, y:-50, font: '16px verdana black' },
     { id: 13, label: "Prototyping", level: 7, group: 100,  project: 2, x:600, y:-50, font: '16px verdana black' },
     { id: 50, label: "Theories ", level: 6, group: 100, project: 2, shape: "box", x:400, y:-50, font: '20px verdana black' },
@@ -289,22 +289,20 @@ function startNetwork(data) {
       }
       //Enter key to open modal
       else if(keyName=="Enter"){
-        //console.log("We've hit the enter key")
-        //console.log("The counter is")
-        console.log(counter)
-
-
+        //Work around for start condition
         if(counter == 1000){
           counter = 0
 
+          //Select the current node.
           currentNode = allNodes[0]
           network.selectNodes([currentNode]);
           nodeID = allNodes[0]
-          //console.log("booyah")
 
         }
+        //Otherwise, display current node
         else{
           index = counter - 1
+          //End of line condition
           if(index == -1 ){
             index = 15
           }
@@ -315,8 +313,8 @@ function startNetwork(data) {
 
         var modalcontent = document.getElementById("modal-content")
         var text = ""
+        //TO-DO Combine 50 and 0
         if(nodeID==50){
-
           var html = text.concat("<p><b>", nodeData[nodeID].title,
           "</b> <br> ",  nodeData[nodeID].blurb,
         " <br>Pre-requisite Understanding: ", nodeData[nodeID].prereq )
@@ -335,23 +333,20 @@ function startNetwork(data) {
 
         }
 
-
+        //Display Modal
         modalcontent.innerHTML = html
         modal.style.display = "block";
 
       }
 
       else{
-        console.log("Warning: Invalid key entry.")
+        console.log("Warning: key entry may be invalid.")
       }
 
       if(change){
-        console.log("Does is change here")
-
         if(counter < 15){ counter = counter + 1; }
         else{ counter = 0 }
         currentNode = allNodes[counter];
-
       }
 
     });
