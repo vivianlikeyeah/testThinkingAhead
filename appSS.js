@@ -48,7 +48,7 @@ function startNetwork(data) {
       }
     },
     physics:{
-        enabled: true,
+        enabled: false,
         forceAtlas2Based: {
      theta: 0.5,
      gravitationalConstant: 0,
@@ -176,7 +176,7 @@ function startNetwork(data) {
           else{
             console.log("here")
             currentNode = allNodes[0]
-            counter = 0
+            counter = 1000
           }
 
       });
@@ -207,23 +207,23 @@ function startNetwork(data) {
 
     //Node Data for the learning tree network
     var nodesArray = [
-    { id: 4, label: "User-centred \n design", level: 4, group: 100,  project: 4, x:0, y:0, font: '16px verdana black' },
-    { id: 1, label: "Working \n Effectively", level: 1, group: 100,  project: 2, x:0, y:0, font: '16px verdana black'},
-    { id: 5, label: "Understanding \n your users", level: 5, group: 100,  project: 2, x:0, y:0, font: '16px verdana black' },
-    { id: 3, label: "Research\n Skills", level: 3, group: 100,  project: 2, x:0, y:0, font: '16px verdana black' },
-    { id: 13, label: "Prototyping", level: 7, group: 100,  project: 2, x:100, y:-4, font: '16px verdana black' },
-    { id: 50, label: "Theories ", level: 6, group: 100, project: 2, shape: "box", x:0, y:0, font: '20px verdana black' },
-    { id: 6, label: "Art", level: 6, group: 4, project: 2, x:0, y:0, font: '16px verdana black' },
-    { id: 7, label: "Product \n Design ", level: 6, group: 4, project: 2, x:0, y:0, font: '16px verdana black'   },
-    { id: 8, label: "Psychology", level: 6, group: 4, project: 2, x:0, y:0, font: '16px verdana black'   },
-    { id: 9, label: "Public health", level: 6, group: 4, project: 2, x:0, y:0, font: '16px verdana black' },
-    { id: 10, label: "City Planning", level: 6, group: 4, project: 2, x:0, y:0, font: '16px verdana black' },
-    { id: 11, label: "S.T.E.M", level: 6, group: 4, project: 2, x:0, y:0, font: '16px verdana black' },
-    { id: 12, label: "Sustainability", level: 6, group: 4, project: 2, x:0, y:0, font: '16px verdana black' },
-    { id: 14, label: "Presenting \n your idea", level: 8, group: 100,  project: 4, x:0, y:0, font: '16px verdana black' },
-    { id: 2, label: "Project \n Management", level: 2, group: 100,  project: 2, x:-1, y:0, font: '16px verdana black' },
-    { id: 15,  label: "Employability", level: 9, group: 100, project: 4, x:0, y:0, font: '16px verdana black' },
-    { id: 0, label: 'Start', level: 0, shape: 'box', group:100, project: 4, x:-10, y:70, font:{size:30}}
+    { id: 4, label: "User-centred \n design", level: 4, group: 100,  project: 4, x:50, y:30, font: '16px verdana black' },
+    { id: 1, label: "Working \n Effectively", level: 1, group: 100,  project: 2, x:-150, y:-200, font: '16px verdana black'},
+    { id: 5, label: "Understanding \n your users", level: 5, group: 100,  project: 2, x:150, y:-50, font: '16px verdana black' },
+    { id: 3, label: "Research\n Skills", level: 3, group: 100,  project: 2, x:-40, y:-50, font: '16px verdana black' },
+    { id: 13, label: "Prototyping", level: 7, group: 100,  project: 2, x:600, y:-50, font: '16px verdana black' },
+    { id: 50, label: "Theories ", level: 6, group: 100, project: 2, shape: "box", x:400, y:-50, font: '20px verdana black' },
+    { id: 6, label: "Art", level: 6, group: 4, project: 2, x:100, y:150, font: '16px verdana black' },
+    { id: 7, label: "Product \nDesign ", level: 6, group: 4, project: 2, x:200, y:150, font: '16px verdana black'   },
+    { id: 8, label: "Psychology", level: 6, group: 4, project: 2, x:300, y:150, font: '16px verdana black'   },
+    { id: 9, label: "Public \nhealth", level: 6, group: 4, project: 2, x:400, y:150, font: '16px verdana black' },
+    { id: 10, label: "City Planning", level: 6, group: 4, project: 2, x:500, y:150, font: '16px verdana black' },
+    { id: 11, label: "S.T.E.M", level: 6, group: 4, project: 2, x:600, y:150, font: '16px verdana black' },
+    { id: 12, label: "Sustainability", level: 6, group: 4, project: 2, x:700, y:150, font: '16px verdana black' },
+    { id: 14, label: "Presenting \n your idea", level: 8, group: 100,  project: 4, x:700, y:0, font: '16px verdana black' },
+    { id: 2, label: "Project \n Management", level: 2, group: 100,  project: 2, x:-40, y:-200, font: '16px verdana black' },
+    { id: 15,  label: "Employability", level: 9, group: 100, project: 4, x:800, y:-50, font: '16px verdana black' },
+    { id: 0, label: 'Start', level: 0, shape: 'box', group:100, project: 4, x:-270, y:-200, font:{size:30}}
     ];
 
     //Connections between nodes
@@ -264,9 +264,14 @@ function startNetwork(data) {
     document.addEventListener('keydown', (event) => {
       const keyName = event.key;
       change = false;
+      //console.log(keyName)
 
       //Space key to traverse tree
       if(keyName==" "){
+        modal.style.display = "none";
+        console.log("The current node is ")
+        console.log(currentNode)
+        console.log("That's what we're selecting.")
         if(counter == 1000){
           counter = 0;
         }
@@ -284,15 +289,18 @@ function startNetwork(data) {
       }
       //Enter key to open modal
       else if(keyName=="Enter"){
-        console.log("We've hit the enter key")
-        console.log("The counter is")
+        //console.log("We've hit the enter key")
+        //console.log("The counter is")
         console.log(counter)
+
+
         if(counter == 1000){
           counter = 0
 
           currentNode = allNodes[0]
           network.selectNodes([currentNode]);
           nodeID = allNodes[0]
+          //console.log("booyah")
 
         }
         else{
